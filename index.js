@@ -1,6 +1,8 @@
 function takeANumber(deliLine, customer_name) {
   deliLine.push(customer_name);
-  return deliLine.index(customer_name) + 1;
+  var pos = deliLine.index(customer_name) + 1;
+  var resp = `Welcome, ${customer_name}. You are number ${pos} in line.`
+  return resp;
 }
 
 function nowServing(deliLine) {
