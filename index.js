@@ -21,5 +21,5 @@ function currentLine(deliLine) {
   for (let counter = 0; counter < deliLine.length; counter++){
     resp += `${counter + 1}. ${deliLine[counter]},`
   }
-  return resp.pop()
+  return resp.substr(0,-2);
 }
