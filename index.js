@@ -10,3 +10,14 @@ function nowServing(deliLine) {
     return deliline.shift();
   }
 }
+
+function currentLine(deliLine) {
+  if (deliLine.length === 0) {
+    return "The line is currently empty."
+  }
+  let resp = "The line is currently: ";
+  for (let counter = 0; counter < deliLine.length; counter++){
+    resp += `${counter + 1}. ${deliLine[counter]},`
+  }
+  return resp.pop()
+}
