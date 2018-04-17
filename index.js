@@ -19,7 +19,7 @@ function currentLine(deliLine) {
   }
   let resp = "The line is currently: ";
   for (let counter = 0; counter < deliLine.length; counter++){
-    resp += `${counter + 1}. ${deliLine[counter]},`
+    resp += `${counter + 1}. ${deliLine[counter]}, `
   }
   return resp;
 }
