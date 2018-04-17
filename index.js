@@ -17,9 +17,10 @@ function currentLine(deliLine) {
   if (deliLine.length === 0) {
     return "The line is currently empty."
   }
-  let resp = "The line is currently: ";
+  let resp = "The line is currently: ", sep = ', ';
   for (let counter = 0; counter < deliLine.length; counter++){
-    resp += `${counter + 1}. ${deliLine[counter]}, `
+    if (counter == deliLine.length - 1) { sep = ''}
+    resp += `${counter + 1}. ${deliLine[counter]}${sep}`
   }
-  return resp;
+  return resp.trim();
 }
